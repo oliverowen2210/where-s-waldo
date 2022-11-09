@@ -20,13 +20,18 @@ h1 {
   height: 15vh;
 }
 
-#waldo {
+.waldo {
   border: 5px solid white;
-  max-height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 
-#target {
-  background-image: url("target.png");
+.waldoImage {
+  max-height: 100%;
+}
+
+.target {
+  background-image: url("./images/target.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%;
