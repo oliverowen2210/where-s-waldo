@@ -37,12 +37,27 @@ export default function Waldo(props) {
       x: clickX,
       y: clickY,
     });
+    checkHit(x, y);
   }
+
+  function checkHit(x, y) {
+    for (let character in props.board.characters) {
+      let char = props.board.characters[character];
+      if (x >= char.start[0] && x <= char.end[0]) {
+        if (y >= char.start[1] && y <= char.end[1]) {
+          if (char.hit) return;
+          char.hit = true;
+          console.log("hit " + character);
+        }
+      }
+    }
+  }
+
   return (
     <div className="waldo">
       <img
         ref={waldoRef}
-        src={props.image}
+        src={props.board.image}
         className="waldoImage"
         onClick={(e) => {
           handleClick(e.nativeEvent);
