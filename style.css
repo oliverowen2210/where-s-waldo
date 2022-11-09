@@ -7,7 +7,7 @@ body {
   padding: 0;
   min-width: fit-content;
   background-color: black;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding: 0 5% 5%;
 }
 
@@ -23,4 +23,16 @@ h1 {
 #waldo {
   border: 5px solid white;
   max-height: 100vh;
+}
+
+#target {
+  background-image: url("target.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+}
+
+.hidden {
+  display: none;
 }
